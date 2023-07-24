@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQwTmqPtLkDpLhrHJ4VroEf0E5cnwCtws
+    &callback=initMap" async defer></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="https://gomycode.com/tn/wp-content/uploads/sites/26/2022/06/new-logo-e1679052959915.png" alt="">
+                
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gom-section">
+        <div>
+            <h1>Welcome to Gabès HackerSpace</h1>
+            <p>Adresse : 5éme étage, Immeuble Yassmine, Av. Abou El Kacem Chebbi, Gabès 6000.</p>
+            <p>Téléphone : 39 143 900</p>
+            
+        </div>
+    </section>
+
+    <div id="map"></div>
+
+    <script>
+        function initMap() {
+            
+            var myLatLng = { lat: 33.8722519, lng: 10.1099975 };
+    
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: myLatLng,
+                zoom: 10 
+            });
+    
+            // GoMyCode Position
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'GoMyCode Gabès'
+            });
+        }
+    </script>
+    
+</body>
+
+</html>
